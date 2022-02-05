@@ -1,0 +1,84 @@
+﻿No regexp 
+No replace method
+
+
+Take an input of a string w spaces, and replace the spaces with “%20”
+
+
+Solve:
+* Recursively
+* Non-recursively
+
+
+Always input a string
+Output a string always
+Solve in js, preferably pure functions
+
+
+Examples:
+Const testInput = “Ella Julianna Tanttu”
+Example output: “Ella%20Julianna%20Tanttu”
+
+
+string.split(“ ”) // [“Ella”, “Julianna”, “Tanttu”]
+array.join(“%20”) // “Ella%20Julianna%20Tanttu”
+
+
+Const spaceChangerNR = (string) => {
+        Return (string.split(“ ”)).join(“%20”)
+ }
+
+
+Const testInput = “Ella Julianna Tanttu”
+spaceChangerNR(testInput); // “Ella%20Julianna%20Tanttu”
+
+
+Recursive
+Inputting a string
+X Termination case: “”, (input value wrapped in a .tostring())
+X Base case: “”
+X Recursive Logic: string, substring methods, 
+Eliminate first character
+If (“ ”) > “%20” concat to the return value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Const spaceChangeR = (string) => { // “Ella Julianna Tanttu”
+        If(string.length <= 1) {
+                Return the string;
+} else if(string[0] === “ “) {
+        Return “%20” + spaceChangeR(string.substring(1, string.length))“Ella%20Julianna%20Tanttu” + spaceChangeR(“”)
+
+
+} else {
+        Return string[0] + spaceChangeR(string.substring(1, string.length)) “Ella” + spaceChangeR( Julianna Tanttu”)
+}
+}
+
+
+Const testInput = “Ella Julianna Tanttu”
+spaceChangeR(testInput);
+“Ella%20Julianna%20Tanttu”
